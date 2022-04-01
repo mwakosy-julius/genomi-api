@@ -119,3 +119,6 @@ async def restriction_siter(restriction_site, sequence):
     motif_count = sequence.count(restriction_site) or  sequence.count(reverse(restriction_site)) 
     return motif_count
 
+if __name__ == '__main__':
+
+    uvicorn.run(app, host='127.0.0.1', port=8000, debug=True)
